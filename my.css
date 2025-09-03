@@ -1,0 +1,808 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+} 
+body{
+  color: #0097a7;
+  background:rgb(2, 10, 56);
+}
+
+.header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(8, 6, 60);
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: aquamarine;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0; /* Starting opacity */
+    animation: slideRight 1s ease forwards; /* Correct animation property */
+}
+.navbar a
+{
+  display: inline-block;
+  font-size: 25px;
+  color: blueviolet;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: .3s;
+  opacity: 0; /* Starting opacity */
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+  
+}
+
+.navbar a:hover{
+    color:white;
+}
+.firstsection{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(wall.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.left-section{
+    max-width: 600px;
+}
+
+.left-section h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.home_content h3:nth-of-type(2){
+    margin-bottom:30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;    
+}
+.left-section h3 span
+{
+    color: rgb(68, 68, 180);
+
+}
+.left-section h1{
+    font-size:  56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0; /* Starting opacity */
+    animation: slideRight 1s ease forwards; /* Correct animation property */
+    animation-delay: 1s;
+
+}
+
+.left-section p{
+     font-size: 20px;
+     opacity: 0;
+     animation: slideLeft 1s ease forwards;
+     animation-delay: 1s;
+}
+
+.leftinfo a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5 ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+
+.leftinfo a:hover{
+    background: #0097a7;
+    color: white;
+    box-shadow: 0 0 20px aqua;
+}
+
+.morebutton{
+    display: inline-block;
+    padding: 12px 28px;
+    background: aqua;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;  
+    box-shadow: 0 0 5px #0ef,
+                0 0 25px #0ef 
+   
+}
+
+.morebutton:hover{
+    box-shadow: 0 0 5px aqua,
+    0 0 25px aqua, 0 0 50px aqua,
+    0 0 100px aqua, 0 0 200px aqua;
+
+  
+}
+
+
+
+.about {
+    display: grid;
+   
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+   
+    gap:1.5rem;
+     
+}
+
+
+.about-img img {
+    padding-bottom: 20%;
+    max-width: 630px; 
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    
+}
+
+.about-text h2{
+    font-size:60px;
+}
+
+.about-text h2 span{
+    color:aqua
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: beige;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p{
+    color: azure;
+    font-size: 20px;
+    line-height: 1.4rem;
+    margin-bottom: 4 rem;
+}
+
+#services{
+    color:white;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #0ef;
+}
+.container{
+    padding: 90pa;
+
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+
+}
+
+.services-list div{
+    background-color: transparent;
+    padding: 13px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #0053b8f7
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #0053b8f7;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;  
+    box-shadow: 0 0 5px #0ef,
+                0 0 25px #0ef 
+   
+}
+
+.read:hover{
+    box-shadow: 0 0 5px aqua,
+    0 0 25px aqua, 0 0 50px aqua,
+    0 0 100px aqua, 0 0 200px aqua;
+
+}
+
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+/* Ensure section is styled correctly */
+section {
+    display: grid;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Center the section if needed */
+    padding: 20px; /* Add some padding around the section */
+}
+
+/* Style the container */
+.container1 {
+    width: 600px;
+    height: auto; /* Adjust height based on content */
+    padding: 20px 30px; /* Padding around the container */
+    margin-left: auto; /* Center container horizontally */
+    margin-right: auto;
+}
+
+/* Style the heading */
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 20px;
+}
+
+/* Style each bar */
+.bar {
+    font-size: 23px;
+    margin-bottom: 20px; /* Space between bars */
+    position: relative; /* Relative positioning for progress-line absolute positioning */
+}
+
+/* Style the icon and info container */
+.bar i {
+    font-size: 30px; /* Adjust icon size as needed */
+}
+
+.bar .info {
+    margin-bottom: 5px;
+}
+
+.bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 1; /* Make sure text is visible */
+}
+
+/* === COMMON LAYOUT STYLES === */
+.Technical-bars, .skill-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Skill Block */
+.bar, .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Icons */
+.bar i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* Skill Name */
+.bar .info span,
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+/* === PROGRESS BAR STYLES === */
+.progress-line {
+    position: relative;
+    width: 500px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Filled Bar */
+.progress-bar {
+    height: 100%;
+    background-color: green;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+/* === TECHNICAL SKILLS VALUES === */
+.progress-bar.java {
+    width: 70%;
+}
+.progress-bar.java::after {
+    content: "70%";
+}
+
+.progress-bar.c-plus-plus {
+    width: 90%;
+}
+.progress-bar.c-plus-plus::after {
+    content: "90%";
+}
+
+.progress-bar.html {
+    width: 80%;
+}
+.progress-bar.html::after {
+    content: "80%";
+}
+
+.progress-bar.css {
+    width: 90%;
+}
+.progress-bar.css::after {
+    content: "90%";
+}
+
+.progress-bar.javascript {
+    width: 90%;
+}
+.progress-bar.javascript::after {
+    content: "90%";
+}
+
+.progress-bar.react {
+    width: 50%;
+}
+.progress-bar.react::after {
+    content: "50%";
+}
+
+/* === PROFESSIONAL SKILLS VALUES === */
+.progress-bar.time-management {
+    width: 80%;
+}
+.progress-bar.time-management::after {
+    content: "80%";
+}
+
+.progress-bar.problem-solving {
+    width: 90%;
+}
+.progress-bar.problem-solving::after {
+    content: "90%";
+}
+
+.progress-bar.creativity {
+    width: 90%;
+}
+.progress-bar.creativity::after {
+    content: "90%";
+}
+
+.progress-bar.communication {
+    width: 80%;
+}
+.progress-bar.communication::after {
+    content: "80%";
+}
+
+.progress-bar.teamwork {
+    width: 80%;
+}
+.progress-bar.teamwork::after {
+    content: "80%";
+}
+
+/* Percentage Label Inside Filled Bar */
+.progress-bar::after {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Percentage text style */
+.percentage {
+    font-size: 14px;        /* Font size for percentage */
+    color: #000;            /* Color of the percentage text */
+    margin-top: 5px;        /* Space above the percentage */
+}
+
+
+/* Ensure the percentage displays at the end of the bar */
+.progress-line span::after {
+    content: '80%'; /* Adjust dynamically with JS if needed */
+    position: absolute;
+    background-color: #000; /* Background for visibility */
+    color: #fff; /* Text color */
+    font-size: 12px; /* Font size */
+    border-radius: 3px;
+    top: -28px; /* Adjust as necessary */
+    left: 100%; /* Position to the right end */
+    transform: translateX(10px); /* Adjust space between line and text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    opacity: 0; /* Initially hidden */
+    animation: showText 0.5s 1.5s linear forwards; /* Animation */
+}
+
+.progress-line.java span::after {
+    content: '80%'; /* Example for Java */
+   
+}
+.progress-line.c-plus-plus span::after {
+    content: '100%'; /* Example for Java */
+   
+}
+
+.progress-line.html span::after {
+    content: '90%'; /* Example for HTML */
+}
+.progress-line.css span::after {
+    content: '85%'; /* Example for CSS */
+}
+.progress-line.javascript span::after {
+    content: '75%'; /* Example for JavaScript */
+}
+.progress-line.react span::after {
+    content: '65%'; /* Example for React */
+}
+
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: white;
+    top: -10px;
+    left: 100%; /* Position the triangle at the end of the line */
+    transform: translateX(10px); /* Adjust to align with text */
+    opacity: 0; /* Initially hidden */
+    animation: showText 0.5s 1.5s linear forwards; /* Animation */
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+.main-text{
+    padding-top: 130px;
+    margin-top: 200px;
+}
+.main-text h2{
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+.main-text h2 span{
+    color: #0ef;
+}
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(359px,auto));
+}
+.row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.row img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.1)blueviolet);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.layer i{
+    color: red;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.row:hover img{
+    transform: scale(1.1);
+    
+}
+
+.row:hover .layer{
+    height: 100%;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap:3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+.contact-text h2 span{
+    color: #0ef ;
+}
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(228,228,228);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p{
+    color: rgb(177,177,177);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list i{
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid skyblue;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+
+}
+
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px aqua;
+
+}
+
+.contact-form form {
+    display: flex;               /* Use flexbox for the form elements */
+    flex-direction: column;      /* Stack form elements vertically */
+}
+
+.contact-form form input,form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #555;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+.contact-form form .send{
+    display: inline-block;
+    padding: 14px 28px;
+    background: aqua;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;  
+    box-shadow: 0 0 5px #0ef,
+                0 0 25px #0ef 
+
+}
+ .contact-form form .send:hover{
+    box-shadow: 0 0 5px aqua,
+    0 0 25px aqua, 0 0 50px aqua,
+    0 0 100px aqua, 0 0 200px aqua;
+
+  
+}
+
+
+
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px); /* Starting position */
+        opacity: 0; /* Starting opacity */
+    }
+    100% {
+        transform: translateX(0); /* Ending position */
+        opacity: 1; /* Ending opacity */
+    }
+}
+
+
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100px); /* Starting position */
+        opacity: 0; /* Starting opacity */
+    }
+    100% {
+        transform: translateX(0); /* Ending position */
+        opacity: 1; /* Ending opacity */
+    }
+}
+
+
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px); /* Starting position */
+        opacity: 0; /* Starting opacity */
+    }
+    100% {
+        transform: translateY(0); /* Ending position */
+        opacity: 1; /* Ending opacity */
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px); /* Starting position */
+        opacity: 0; /* Starting opacity */
+    }
+    100% {
+        transform: translateY(0); /* Ending position */
+        opacity: 1; /* Ending opacity */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
